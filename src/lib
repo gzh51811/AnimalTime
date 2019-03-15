@@ -1,0 +1,8 @@
+img 放图片
+pages 是其他页面
+components 是首页的5大页面
+router 是动态路由的接口和路由守卫
+app.vue 引入要用的框架 模块之类的 
+component 是组件 插件 放入到相对应的页面使用的
+style 是公共样式
+js 是rem的那个公式
