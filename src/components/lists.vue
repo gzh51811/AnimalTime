@@ -1,5 +1,16 @@
 <template>
   <div>
-    <!-- 分类页面 --> <h1>1111</h1>
+    <!-- 分类页面 -->
+    <Liststop/>
   </div>
 </template>
+<script>
+import Liststop from "../component/Liststop.vue";
+
+export default {
+  components: {
+    Liststop
+  }
+};
+</script>
+
