@@ -2,6 +2,7 @@
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import App from '../App.vue'
 
 import Home from '../components/home'
 import Cart from '../components/cart'
@@ -20,25 +21,47 @@ Vue.use(VueRouter);
 let router = new VueRouter({
     routes: [
         {
-            path: '/',
-            redirect: '/home'
-            // 地址如果是/的话就自动跳转为首页
+            path: '/app',
+            redirect: '/app/home'
         },
+        {
+            path: '/app',
+            // redirect: '/home'
+            component: App,
+            children: [
+                // 地址如果是/的话就自动跳转为首页
+                {
+                    // 首页路由
+                    name: 'Home',
+                    path: 'home',
+                    component: Home,
 
-        {
-            // 这里的参数要在下面的全局路由守卫使用!!
-            name: 'Cart',
-            path: '/cart',
-            component: Cart,
-            meta: {
-                requiresAuth: true
-            }
-        },
-        {
-            // 首页路由
-            name: 'Home',
-            path: '/home',
-            component: Home
+                },
+                {
+                    // 这里是嵌套路由
+                    // 嵌套路由里面path 的/ 要去掉
+                    // 购物车路由
+                    // name: 'Cart',
+                    path: 'cart',
+                    component: Cart,
+                    meta: {
+                        requiresAuth: true
+                    }
+
+                },
+                {
+                    // 分页的路由
+                    name: 'Lists',
+                    path: 'lists',
+                    component: Lists
+                },
+                {
+                    // 我的钱包路由
+                    name: 'Mybar',
+                    path: 'mybar',
+                    component: Mybar
+                }
+            ]
         },
         {
             // 列表页路由
@@ -51,12 +74,6 @@ let router = new VueRouter({
             name: 'Goods',
             path: '/goods',
             component: Goods,
-        },
-        {
-            // 分页的路由
-            name: 'Lists',
-            path: '/lists',
-            component: Lists
         },
         {
             // 首页跳转详情页的路由
@@ -82,13 +99,6 @@ let router = new VueRouter({
                 }
             }
         },
-
-        {
-            // 我的钱包路由
-            name: 'Mybar',
-            path: '/mybar',
-            component: Mybar
-        },
         {
             // 注册的路由
             name: 'Reg',
@@ -101,6 +111,7 @@ let router = new VueRouter({
             path: '/pinglun',
             component: Pinglun
         }
+
     ]
 });
 
