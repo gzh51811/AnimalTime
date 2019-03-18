@@ -20,253 +20,211 @@
     </section>
     <!-- 功能栏 -->
     <section id="goo">
-      <ul class="goo-top">
-        <li
-          v-for="(lefts,idx) in list"
-          :key="idx"
-          @click="check(idx)"
-          :class="{active:car===idx}"
-        >{{lefts}}</li>
-      </ul>
-      <ul class="goo-bottom">
-        <li v-for="days in day" :key="days">
-          <img src="../img/icon.png" alt>
-          <span class="font">{{days}}</span>
-        </li>
-      </ul>
+      <div :class="goods == true ? 'menu' :''">
+        <ul class="goo-top">
+          <li
+            v-for="(lefts,idx) in list"
+            :key="idx"
+            @click="check(idx)"
+            :class="{active:car===idx}"
+          >{{lefts}}</li>
+        </ul>
+        <ul class="goo-bottom">
+          <li v-for="days in day" :key="days">
+            <img src="../img/icon.png" alt>
+            <span class="font">{{days}}</span>
+          </li>
+        </ul>
+      </div>
     </section>
     <!-- 下面的渲染部分 -->
     <div class="nav">
       <ul>
-        <li>
+        <li v-for="(list,idx) in lists" :key="idx">
           <div class="libox">
             <div class="liimg">
-              <img src="../img/logo.png" alt>
+              <img :src="list.photo" alt>
             </div>
             <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
+              <h1>
+                {{list.name}}
+                <p>{{list.names}}</p>
               </h1>
               <img
                 src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
                 alt
               >
               <div class="wenzi">
-                <span>￥39.90</span>
+                <span>￥{{list.price}}.90</span>
               </div>
               <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="libox">
-            <div class="liimg">
-              <img src="../img/logo.png" alt>
-            </div>
-            <div class="liright">
-              <h1>伟嘉 精选带鱼味妙鲜包 成猫
-                <p>85g*12袋</p>
-              </h1>
-              <img
-                src="https://static.epetbar.com/static_wap/appmall/lib/list/cu.png?version=2016071303"
-                alt
-              >
-              <div class="wenzi">
-                <span>￥39.90</span>
-              </div>
-              <div class="bottoms">
-                <span class="top1">互动:(98%好评)</span>
-                <span class="bottom1">售出1298</span>
+                <span class="top1">互动:(90%好评)</span>
+                <span class="bottom1">售出{{list.shoujia}}.01w</span>
               </div>
             </div>
           </div>
         </li>
       </ul>
     </div>
+    <div class="nav-bottom" :start="start1">加载更多数据</div>
   </div>
 </template>
 <script>
-window.onload = () => {
-  var top = document.querySelector("#goo");
-  console.log(top);
-  //这个是JS的方法
-  var top1 = top.offsetTop;
-  // 获取box2盒子距离顶部的距离
-  window.onscroll = function() {
-    var top2 = window.scrollY;
-    console.log(top2);
-    //获取window垂直滚动框的高度
-    if (top2 >= top1) {
-      top.className = "menu";
-    } else {
-      top.className = "";
-    }
-  };
-};
 export default {
   data() {
     return {
       list: ["默认", "销量", "价格", "筛选"],
       car: 0,
-      day: ["品牌", "类型", "家庭便捷", "适用猫厕"]
+      day: ["品牌", "类型", "家庭便捷", "适用猫厕"],
+      goods: false,
+      lists: {},
+      page: 1,
+      length: 10,
+      start: true,
+      start1: true
     };
   },
   methods: {
+    // 高亮
     check(idx) {
       this.car = idx;
     },
+    // 跳转回去分类页面
     goto() {
       this.$router.push("app/lists");
+    },
+    // 浮顶菜单
+    goTop() {
+      var scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      var offsetTop = document.querySelector("#goo").offsetTop;
+      if (scrollTop > offsetTop) {
+        this.goods = true;
+      } else {
+        this.goods = false;
+      }
+      console.log(offsetTop);
+    },
+    //懒加载
+    getScrollTop() {
+      // console.log(1);
+      var scrollTop = 0;
+      if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+      } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+      }
+      return scrollTop;
+      console.log(this.scrollTop);
+    },
+    // 获取当前可视范围的高度
+    getClientHeight() {
+      // console.log(1);
+      var clientHeight = 0;
+      if (document.body.clientHeight && document.documentElement.clientHeight) {
+        clientHeight = Math.min(
+          document.body.clientHeight,
+          document.documentElement.clientHeight
+        );
+      } else {
+        clientHeight = Math.max(
+          document.body.clientHeight,
+          document.documentElement.clientHeight
+        );
+      }
+      return clientHeight;
+    },
+
+    // 获取文档完整的高度
+    getScrollHeight() {
+      // console.log(1);
+      return Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+    },
+    // 滚动事件触发下拉加载
+    async onScroll() {
+      //   console.log(111111)
+      if (
+        this.getScrollHeight() - this.getClientHeight() - this.getScrollTop() <
+        0
+      ) {
+        //   console.log(this.length)
+        if (this.start) {
+          let res = await this.$axios
+            .get("http://localhost:5200/api/lists", {
+              params: {
+                zi: "lanjiazai",
+                page: ++this.page,
+                length: this.length
+              }
+            })
+            .then(res => {
+              // console.log(res);
+              console.log(1);
+              let arr = res.data;
+              // console.log(arr)
+              // console.log(this.goodslist)
+              setTimeout(() => {
+                for (var i = 0; i < arr.length; i++) {
+                  this.lists.push(arr[i]);
+                }
+              }, 2000);
+            });
+          // console.log(res)
+        }
+      }
     }
+  },
+  // 浮顶菜单
+  mounted() {
+    this.$nextTick(function() {
+      window.addEventListener("scroll", this.onScroll);
+    });
+    window.addEventListener("scroll", this.goTop);
+  },
+  // 跳转页面的时候删除
+  destroyed() {
+    window.removeEventListener("scroll", this.goTop);
+  },
+  // 初始化数据
+  created() {
+    this.$axios
+      .get("http://localhost:5200/api/lists", {
+        params: {
+          zi: "shuju"
+        }
+      })
+      .then(res => {
+        var data = res.data;
+        this.lists = data;
+        // console.log(this.lists);
+      });
   }
 };
 </script>
 <style scoped>
+.nav-bottom {
+  width: 100%;
+  height: 1rem;
+  background: #ccc;
+}
+.nav-bottom div {
+  text-align: center;
+  line-height: 1rem;
+  width: 100%;
+  height: 1rem;
+}
 .menu {
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99999;
 }
 .bottoms .bottom1 {
   margin-left: 0.1rem;
@@ -397,7 +355,6 @@ export default {
   width: 100%;
   height: 2.4rem;
   background: red;
-  z-index: 99999;
 }
 .search-img {
   background: url(../img/search-ico.png) no-repeat;

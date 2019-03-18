@@ -19,7 +19,7 @@ function connect(collectionName) {
                 return;
             }
             //使用数据库
-            let db = client.db('vipcars');
+            let db = client.db('lists');
             //使用集合
             let col = db.collection(collectionName);
             resolve({ col, client });

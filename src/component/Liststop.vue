@@ -12,24 +12,22 @@
     <div class="leftbox">
       <ul>
         <li
-          v-for="(lefts,idx) in left"
+          v-for="(lefts,idx) in goodlist"
           :key="idx"
-          @click="check(idx)"
+          @click.stop="check(idx)"
           :class="{active:fiexd===idx}"
-        >{{lefts}}</li>
+        >{{lefts.names}}</li>
       </ul>
     </div>
     <div class="rightbox">
       <div class="leftbox-top">
-        <a href @click="check(idx)">{{aaa}}</a>
+        <p>{{aaa.names}}</p>
       </div>
       <ul>
-        <li v-for="lasts in list" :key="lasts.name" @click="goto()">
+        <li @click="goto()" v-for="(link,idx) in right" :key="idx">
           <!-- 加一个点击事件跳转 -->
-          <!-- <div> -->
-          <img :src="lasts.photo" alt>
-          <!-- </div> -->
-          <p>{{lasts.name}}</p>
+          <img :src="link.photo" alt>
+          <p>{{link.name}}</p>
         </li>
       </ul>
     </div>
@@ -39,61 +37,63 @@
 export default {
   data() {
     return {
-      left: [
-        "猫咪清洁",
-        "猫咪装扮",
-        "猫咪窝点",
-        "猫咪主粮",
-        "猫咪零食",
-        "猫咪日用",
-        "猫咪玩具"
-      ],
       fiexd: 0,
-      aaa: "猫咪清洁",
-      list: [
-        {
-          name: "进口猫粮",
-          photo:
-            "https://img2.epetbar.com/nowater/2016-07/21/14/24857d999c8c62a85110c66f1ebcf3ac.jpg"
-        },
-        {
-          name: "美毛化毛",
-          photo:
-            "https://img2.epetbar.com/nowater/2016-08/20/14/db87afdd8179689ef67c0e352e7c2183.jpg"
-        },
-        {
-          name: "体内驱虫",
-          photo:
-            "https://img2.epetbar.com/nowater/cates/2014-03/24/2da82a732a1b0df918dfeb38f6b32621.jpg"
-        },
-        {
-          name: "罐头湿粮",
-          photo:
-            "https://img2.epetbar.com/nowater/2017-05/26/10/209951b1f61083be7bba561de378316c.jpg"
-        },
-        {
-          name: "强化免疫",
-          photo:
-            "https://img2.epetbar.com/nowater/2016-08/20/14/c122bda1f10770c115fe2c765f5b9e83.jpg"
-        },
-        {
-          name: "猫咪猫砂",
-          photo:
-            "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg"
-        }
-      ]
+      goodlist: [],
+      right: [],
+      aaa: "猫咪装扮"
     };
   },
   methods: {
     check(idx) {
       this.fiexd = idx;
       // 要this 一下让能把值赋值给aaa
-      this.aaa = this.left[idx];
+      this.aaa = this.goodlist[idx];
+      let center = {};
+      this.$axios
+        .get("http://localhost:5200/api/listss", {
+          params: {
+            id: this.fiexd
+          }
+        })
+        .then(res => {
+          console.log(1, res);
+          let data = res.data;
+          console.log(data);
+          this.right = data;
+          console.log(this.right);
+        });
     },
     goto() {
-      console.log(1);
       this.$router.push("/List");
     }
+  },
+  created() {
+    this.$axios
+      .get("http://localhost:5200/api/listss", {
+        params: {
+          id: 0
+        }
+      })
+      .then(res => {
+        // console.log(1, res);
+        let data = res.data;
+        // console.log(data);
+        this.right = data;
+        // console.log(this.right);
+      });
+    this.$axios
+      .get("http://localhost:5200/api/lists", {
+        params: {
+          zi: "xuanran"
+        }
+      })
+      .then(res => {
+        // console.log(2, res);
+        let data = res.data;
+        // console.log(data);
+        this.goodlist = data;
+        console.log(this.goodlist);
+      });
   }
 };
 </script>
@@ -208,7 +208,7 @@ li.active {
   background: white;
   line-height: 1.2rem;
 }
-.leftbox-top a {
+.leftbox-top p {
   padding-left: 0.3rem;
   color: #ccc;
 }
