@@ -14,6 +14,8 @@ import Goods from '../pages/goods'
 import List from '../pages/list'
 import Login from '../pages/login'
 import Reg from '../pages/reg'
+import axios from "axios";
+Vue.prototype.$axios = axios;
 
 
 Vue.use(VueRouter);
