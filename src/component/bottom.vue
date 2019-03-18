@@ -14,7 +14,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/app/pinglun">
+        <router-link to="/pinglun">
           <img src="../img/应用中心.png" alt>
           <a href>萌爪联盟</a>
         </router-link>

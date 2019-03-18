@@ -14,7 +14,7 @@
 import Buttom from "./component/bottom";
 
 export default {
-  name: ".app",
+  // name: ".app",
   components: {
     Buttom
   }
@@ -22,5 +22,8 @@ export default {
 </script>
 
 <style>
-
+.app {
+  width: 100%;;
+  margin: auto;
+}
 </style>

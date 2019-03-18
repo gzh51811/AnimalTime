@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 评论页面 -->
-    <h1>1111111</h1>
+    
   </div>
 </template>
 <script>

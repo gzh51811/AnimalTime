@@ -21,6 +21,10 @@ Vue.use(VueRouter);
 let router = new VueRouter({
     routes: [
         {
+            path: '/',
+            redirect: '/app/home'
+        },
+        {
             path: '/app',
             redirect: '/app/home'
         },
