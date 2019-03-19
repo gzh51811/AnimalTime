@@ -38,7 +38,7 @@
     <!-- 下面的渲染部分 -->
     <div class="nav" :start="start1">
       <ul>
-        <li v-for="(list,idx) in lists" :key="idx" @click.stop="gotolist(list.id,list)">
+        <li v-for="(list,idx) in lists" :key="idx" @click.stop="gotolist(list.id)">
           <div class="libox">
             <div class="liimg">
               <img :src="list.photo" alt>
@@ -154,7 +154,8 @@ export default {
     },
     gotolist(id, list) {
       console.log(id);
-      this.$router.push("/goods?id=" + id);
+      // this.$router.push("/goods?id=" + id);
+      this.$router.push({ name: "Goods", query: { id }, params: { id } });
     },
     //懒加载
     getScrollTop() {

@@ -48,7 +48,7 @@ let router = new VueRouter({
                     // 这里是嵌套路由
                     // 嵌套路由里面path 的/ 要去掉
                     // 购物车路由
-                    // name: 'Cart',
+                    name: 'Cart',
                     path: 'cart',
                     component: Cart,
                     meta: {
