@@ -3,8 +3,8 @@
     <div class="wap-top-bar hide" style="display: block;">
         <header class="ftc head-top bgfff zcolor rela">
             <div class="">
-                <a href="javascript:void(0)" class="aback page-top go-back left-more">
-                </a>
+                <router-link to="/app/home" class="aback page-top go-back left-more">
+                </router-link>
                 <span class="ft18 topbar-title">萌爪联盟</span>
                 <div class="zfont ft16 block">
                     <a class="zcolor topbar-link ">
@@ -15,19 +15,19 @@
             </div>
         </header>
         <div class="header-quick header-quicknew  hide Jtk" style="display:block">
-            <a href="https://wap.epet.com/">
+            <a href="javascript:;">
                 <span class="icon1"></span>
                 <p>首页</p>
             </a>
-            <a href="https://wap.epet.com/category.html">
+            <a href="javascript:;">
                 <span class="icon2"></span>
                 <p>商品分类</p>
             </a>
-            <a href="https://wap.epet.com/cart/">
+            <a href="javascript:;">
                 <span class="icon4" id="getCartNum"></span>
                 <p>购物车</p>
             </a>
-            <a href="https://wap.epet.com/app/user">
+            <a href="javascript:;">
                 <span class="icon5"></span>
                 <p>我的e宠</p>
             </a>
@@ -43,7 +43,7 @@
                             <span class="icon-left-open-big ft18"></span>
                         </a>
                     </div>
-                    <a href="https://wap.epet.com/union/trials_intr_main.html" class="ft14">
+                    <a href="javascript:;   " class="ft14">
                         <img src="https://static.epetbar.com/static_web/wap/src/images/qpet/app/join.png" style="width: 30px;">
                     </a>
                 </div>
@@ -174,34 +174,34 @@
             </div>
             <div>
                 <ul class="qpetList2">
-                    <li>
-                        <a href="https://wap.epet.com/union/trials_other_main.html?uid=3128268&amp;newTarget=true&amp;fw=0" class="flex pad15 flex-ac">
+                    <li v-for="(ka,idx) in goodlist" :key="idx">
+                        <a href="javascript:;" class="flex pad15 flex-ac">
                             <div class="mr10">
                                 <div class="imgBox qpetImg1">
-                                    <img src="https://img1.epetbar.com/2018-12/01/17/71b0c55fa6c545f5ab016aa943ab43c0.jpg?x-oss-process=style/fill&amp;$1=150&amp;$2=150"
+                                    <img :src="ka.img"
                                         lazy="loaded">
                                 </div>
                             </div>
                             <div class="it1 mr10">
-                                <div class="ft14 textover">眉眼如墨</div>
-                                <span class="qpetDj" style="background: rgb(228, 249, 227); color: rgb(111, 200, 176);">体验师</span>
+                                <div class="ft14 textover">{{ka.tilte}}</div>
+                                <span class="qpetDj" style="background: rgb(228, 249, 227); color: rgb(111, 200, 176);">{{ka.title1}}</span>
                             </div>
-                            <div class="c666 ft12 it2 ftr textover">金毛 1岁23天</div>
+                            <div class="c666 ft12 it2 ftr textover">{{ka.petmsg}}</div>
                         </a>
-                        <a href="https://wap.epet.com/union/trials_report_detail.html?trid=2727&amp;newTarget=true" class="block pl15 pr15 qpetImg2">
+                        <a href="javascript:;" class="block pl15 pr15 qpetImg2">
                             <div class="imgBox">
-                                <img src="https://img1.epetbar.com/2019-03/14/17/b5a3540379f0f04effe15100e717ed3f.jpg" lazy="loaded">
+                                <img :src="ka.img" lazy="loaded">
                             </div>
-                            <p class="ft14 textover pt10 pb10">休普小脚丫-始于颜值陷于质量忠于实用</p>
+                            <p class="ft14 textover pt10 pb10">{{ka.title}}</p>
                         </a>
                         <div class="relative border-t pt10 ml15 mr15 pb15 flex flex-ac">
-                            <div class="ft12 c999">27分钟前</div>
+                            <div class="ft12 c999">{{ka.showtime}}</div>
                             <div class="it1 ftr qpetColor">
                                 <a href="" class="tu1">
-                                  <img src="../img/tu1.png" alt=""> 71</a>
-                                <a href="" class="tu2"><img src="../img/tu2.png" alt=""> 0</a>
+                                  <img src="../img/tu1.png" alt="">{{ka.view}}</a>
+                                <a href="" class="tu2"><img src="../img/tu2.png" alt="">{{ka.zan}}</a>
                                 <a href="" class="tu3">
-                                  <img src="../img/tu3.png" alt=""> 0</a>
+                                  <img src="../img/tu3.png" alt="">{{ka.zank}}</a>
                             </div>
                         </div>
                     </li>
@@ -213,28 +213,26 @@
 </template>
 <script>
 export default {
-  methods: {
-    created() {
-      // console.log(this);
-      // axios.get('https://www.nanshig.com/mobile/index.php?act=goods&op=goods_list&keyword=&page=10&curpage=1')
-      this.$axios
-        .get("https://www.nanshig.com/mobile/index.php", {
-          params: {
-            act: "goods",
-            op: "goods_list",
-            keyword: "",
-            page: 10,
-            curpage: 1
-          }
-        })
-        .then(res => {
-          // console.log(res);
-          let data = res.data;
-          this.goodslist = data.datas.goods_list;
-
-          // console.log(data.datas.goods_list);
-        });
-    }
+  data() {
+    return {
+      shuju: "",
+      goodlist: {}
+    };
+  },
+  created() {
+    this.$axios
+      .get("http://localhost:5200/api/pinlun", {
+        params: {
+          shuju: "xl"
+        }
+      })
+      .then(res => {
+        // console.log(2, res);
+        let data = res.data;
+        // console.log(data);
+        this.goodlist = data;
+        console.log(this.goodlist);
+      });
   }
 };
 </script>

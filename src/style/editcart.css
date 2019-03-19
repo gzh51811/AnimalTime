@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+lu,li{
+    list-style: none;
+}
+.hide {
+    display: none;
+}
+body {
+    font: 62.5% 'Microsoft Yahei',-apple-system-font,Helvetica Neue,sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 20px;
+    min-width: 320px;
+}
+.head-top.zcolor {
+    color: #333;
+}
+.head-top {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding: 0 1em;
+    border-bottom: 1px solid #f3f3f3;
+}
+.rela {
+    position: relative;
+}
+.bgfff {
+    background: #fff;
+}
+.zcolor {
+    color: #26c269;
+}
+
+.ftc {
+    text-align: center;
+}
+.head-top.zcolor {
+    color: #333;
+}
+.head-top .aback {
+    background: url(../img/medal.png) no-repeat;
+    background-size: 9px 17px;
+    display: block;
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    margin-top: 16px;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.topbar-title {
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 auto;
+}
+.ft18 {
+    font-size: 1.8em;
+}
+.head-top.zcolor {
+    color: #333;
+}   
+.head-top .zfont {
+    position: absolute;
+    right: 2.5em;
+    top: 0;
+}
+.ft16 {
+    font-size: 1.6em;
+}
+.ml {
+    margin-left: 1em;
+}
+
+.pull-right {
+    float: right;
+}
+.head-top .topbar-link {
+    color: #333;
+}
+.head-top .edit{
+    position: absolute;
+    right: 1.066667rem;
+}
+.head-top img{
+    width: 20px;
+    height: 20px; 
+    position: absolute;
+    right: .133333rem;
+    top: .4rem
+}
+.header-quick {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #d7d7d7;
+    overflow: hidden;
+    padding: 1em 0;
+}
+.header-quick a {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.header-quick a span.icon1 {
+    background: url(../img/img.png) 50% 0 no-repeat;
+    background-size: auto 100%;
+}
+.header-quick a span {
+    display: block;
+    height: 2.5em;
+}
+.header-quick a p {
+    color: #666;
+    font-size: 1.4em;
+    text-align: center;
+}
+.mycart-li {
+    position: relative;
+    z-index: 3;
+}
+
+.bgfff {
+    background: #fff;
+}
+.mt {
+    margin-top: 1em;
+}
+.mycart-tit {
+    border: none;
+}
+.checkbox {
+    width: 100%;
+    position: relative;
+}
+.pad10 {
+    padding: 1em;
+}
+.checkbox input {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 50%;
+    outline: 0!important;
+    float: left;
+}
+.checkbox label {
+    cursor: pointer;
+    margin-left: 2.5em;
+    display: block;
+    outline: none;
+}
+label, em, img {
+    vertical-align: middle;
+}
+.mycart-tit span.store {
+    background: none;
+    color: #333;
+    font-size: 15px;
+    margin-right: 0;
+    padding: 0px 5px 1px 0px;
+}
+.mycart-tit span {
+    border-radius: 3px;
+    padding: 1px 8px 1px 21px;
+    display: inline-block;
+    font-size: 12px;;
+}
+.fl {
+    float: left;
+}
+
+.afff {
+    color: #fff;
+}
+.mr5 {
+    margin-right: 0.5em;
+}
+em {
+    font-style: normal;
+}
+.clear {
+    clear: both;
+}
+.overflow {
+    overflow: hidden;
+}
+.checkbox-order1 {
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
+}
+.checkbox-order1 {
+    border-bottom: none;
+}
+.mycart-pro {
+    transition: all 0.4s ease-in-out;
+    z-index: 2;
+    background: #fff;
+    position: relative;
+}
+.checkbox {
+    width: 100%;
+    position: relative;
+}
+.pl {
+    padding-left: 1em;
+}
+.mycart-pro input {
+    margin-top: 40px;
+}
+.cart-proli {
+    border-bottom: 1px solid #ebebeb;
+}
+.cart-proli {
+    margin-left: 2.5em;
+    padding-top: 1em;
+}
+.pb10 {
+    padding-bottom: 1em;
+}
+.rela {
+    position: relative;
+}
+.cart-proli .cart-img {
+    position: absolute;
+}
+.cart-proli .cart-img {
+    width: 85px;
+    height: 85px;
+}
+.loadimg-fixed {
+    background: url(../img/default-epet.png) no-repeat center center #f4f4f4;
+    background-size: 120px auto;
+    position: relative;
+}
+.cart-proli .cart-img img {
+    border: none;
+}
+.cart-proli .cart-img img {
+    width: 85px;
+    height: 85px;
+    border: 1px solid #d7d7d7;
+}
+.loadimg-fixed .image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.cart-proli .cart-font {
+    margin-left: 95px;
+    min-height: 85px;
+    position: initial;
+}
+.cart-proli .cart-font h1 {
+    height: 32px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.c333 {
+    color: #333;
+}
+
+h1 {
+    font-weight: normal;
+}
+.cart-font b {
+    color: #f03e3e;
+}
+.mr3 {
+    margin-right: 0.3em;
+}
+b {
+    font-weight: normal;
+}
+.ft15 {
+    font-size: 1.5em;
+}
+.buynum-wrap {
+    border-radius: 30px;
+    width: 96px;
+    border: none;
+    margin-top: 1px;
+    background: #fff;
+    display: inline-block;
+}
+.c89 {
+    color: #898989;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
+}
+.buynum-wrap .subnum {
+    border-radius: 30px 0px 0px 30px;
+    border-left: .5px solid #333;
+    color: #333;
+    padding-left: 13px;
+}
+.buynum-wrap span {
+    height: 20px;
+    line-height: 19px;
+    width: 32px;
+    border-top: .5px solid #333;
+    border-bottom: .5px solid #333;
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+}
+.bold {
+    font-weight: bold;
+}
+.buynum-wrap .text {
+    height: 20px;
+    line-height: initial;
+    border: .5px solid #333;
+    color: #333;
+    width: 32px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+.cart_buynum_txt input[type="text"] {
+    margin-top: 0;
+    border-radius: 0;
+    border: none;
+    font-size: 16px;
+    float: none;
+    padding: 0;
+    width: 29px;
+    height: 18px;
+    position: inherit;
+    text-align: center;
+    margin: 0;
+}
+.checkbox input {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 50%;
+    outline: 0!important;
+    float: left;
+}
+input[type="text"] {
+    height: 30px;
+    -webkit-appearance: none;
+    padding: 0 15px;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    outline: none;
+}
+.buynum-wrap .addnum {
+    line-height: 15px;
+    border-right: .5px solid #333;
+    border-radius: 0px 30px 30px 0px;
+    color: #333;
+    padding-left: 8px;
+    border-left: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.cart-float {
+    height: 59px;
+    position: absolute;
+    bottom: 0;
+}
+.cart-footer {
+    z-index: 3;
+}
+.cart-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+}
+.all-price {
+    width: auto;
+}
+.cart-twocenter input {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.cart-twocenter .checkbox label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 37px;
+}
+.checkbox label {
+    cursor: pointer;
+    margin-left: 2.5em;
+    display: block;
+    outline: none;
+}
+.c666 {
+    color: #666;
+}
+.ft14 {
+    font-size: 1.4em;
+}
+.cred {
+    color: #ff0000;
+}
+.ft12 {
+    font-size: 1.2em;
+}
+.no-buy, no-buy:active {
+    background: #bdbdbd;
+    border-radius: 5px;
+    width: 96px;
+    height: 35px;
+    line-height: 35px;
+}
+.afff {
+    color: #fff;
+}
+.cart-footer .discount {
+    height: 35px;
+    line-height: 35px;
+}   
+.discount {
+    padding: 0 15px;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.mycart .helpico {
+    background: #fbeacf;
+    border: 1px solid #fbeacf;
+    color: #ecb44b;
+}
+
+.helpico {
+    background: #f1f1f1;
+    border: 1px solid #d8d8d8;
+    color: #999;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 0px;
+}
