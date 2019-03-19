@@ -6,6 +6,7 @@ import App from '../App.vue'
 
 import Home from '../components/home'
 import Cart from '../components/cart'
+import editCart from '../components/editcart'
 import Lists from '../components/lists'
 import Pinglun from '../components/pinglun'
 import Mybar from '../components/mybar'
@@ -55,6 +56,7 @@ let router = new VueRouter({
                     }
 
                 },
+
                 {
                     // 分页的路由
                     name: 'Lists',
@@ -68,6 +70,19 @@ let router = new VueRouter({
                     component: Mybar
                 }
             ]
+        },
+        {
+            // 这里是嵌套路由
+            // 嵌套路由里面path 的/ 要去掉
+            // 购物车路由
+            // name: 'editCart',
+            name:'editCart',
+            path: '/editcart',
+            component: editCart,
+            // meta: {
+            //     requiresAuth: true
+            // }
+
         },
         {
             // 列表页路由

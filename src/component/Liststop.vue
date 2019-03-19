@@ -13,7 +13,7 @@
       <ul>
         <li
           v-for="(lefts,idx) in goodlist"
-          :key="idx"
+          :key="idx"  
           @click.stop="check(idx)"
           :class="{active:fiexd===idx}"
         >{{lefts.names}}</li>

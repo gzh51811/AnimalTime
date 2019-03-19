@@ -7,7 +7,7 @@
                     <a href="javascript:void(0)" class="aback page-top go-back left-more">
                     </a>
                     <span class="ft18">购物车</span>
-                    <router-link to="/editcart" class="ft18 edit">编辑</router-link>
+                    <router-link to="/app/cart" class="ft18 edit">完成</router-link>
                     <img src="../img/imgtk-new.png" alt="" class="rttop">
                 </div>
             </header>
