@@ -1,0 +1,226 @@
+.jiazai{
+    display:block;
+}
+.meiyou{
+    display: none;
+}
+.nav-bottom {
+    width: 100%;
+    height: 1rem;
+    background: #ccc;
+  }
+  .nav-bottom div {
+    text-align: center;
+    line-height: 1rem;
+    width: 100%;
+    height: 1rem;
+  }
+  .menu {
+      width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  .bottoms .bottom1 {
+    margin-left: 0.1rem;
+    color: #999;
+  }
+  .bottoms .top1 {
+    color: #999;
+  }
+  .bottoms {
+    margin-top: 0.133333rem;
+  }
+  .wenzi span {
+    color: red;
+  }
+  .liright img {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: 0.133333rem;
+  }
+  .liright {
+    width: 70%;
+    height: 100%;
+    background: white;
+    float: left;
+  }
+  .liimg {
+    width: 30%;
+    height: 100%;
+    background: white;
+    position: relative;
+    float: left;
+  }
+  .liimg img {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+  }
+  .libox {
+    width: 98%;
+    height: 95%;
+    background: white;
+    margin: auto;
+    margin-top: 0.1rem;
+  }
+  .nav {
+    width: 100%;
+    background: white;
+  }
+  .nav ul {
+    width: 100%;
+    height: 100%;
+  }
+  .nav ul li {
+    width: 100%;
+    height: 3.333333rem;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+  .box {
+    background: wheat;
+    width: 100%;
+    height: 100%;
+  }
+  .header {
+    width: 100%;
+    height: 1.333333rem;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+  .top {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: white;
+    position: relative;
+  }
+  .img1 {
+    margin: 0;
+    position: absolute;
+    /* left: 0.04rem; */
+    width: 1rem;
+    height: 1rem;
+    top: 0.2rem;
+    background: url(../img/topIco.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+  }
+  .center {
+    width: 100%;
+    height: 100%;
+    line-height: 1.333333rem;
+    text-align: center;
+    font-size: 20px;
+  }
+  .img2 {
+    margin: 0;
+    position: absolute;
+    right: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    top: 5%;
+    background: url(../img/topIco.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 -1.9rem;
+  }
+  .suo {
+    width: 100%;
+    height: 1.6rem;
+    background: white;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+  }
+  .search {
+    width: 90%;
+    background: #f6f6f6;
+    height: 1.066667rem;
+    border-radius: 0.133333rem;
+    -webkit-border-radius: 0.133333rem;
+    -moz-border-radius: 0.133333rem;
+    flex: 1;
+    -webkit-flex: 1;
+    position: absolute;
+    top: 0.25rem;
+    left: 5%;
+  }
+  #goo {
+    width: 100%;
+    height: 2.4rem;
+    background: red;
+  }
+  .search-img {
+    background: url(../img/search-ico.png) no-repeat;
+    background-size: 100%;
+    width: 0.533333rem;
+    height: 0.533333rem;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+  }
+  .font {
+    height: 1.066667rem;
+    border-radius: 0.08rem;
+    border: none;
+    background: #f6f6f6;
+    font-family: "Microsoft Yahei", tahoma, arial;
+    padding: 0px;
+    outline: none;
+    width: 90%;
+    text-indent: 5px;
+    margin-left: 1rem;
+  }
+  .goo-top {
+    width: 100%;
+    height: 1.4rem;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+  .goo-top li {
+    width: 25%;
+    height: 100%;
+    line-height: 1.4rem;
+    text-align: center;
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .goo-bottom {
+    width: 100%;
+    height: 1rem;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+  .goo-bottom li {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
+  .goo-bottom li .font {
+    color: black;
+    display: block;
+    width: 100%;
+    margin: auto;
+    height: 0.8rem;
+    background: #f6f6f6;
+    margin-top: 0.1rem;
+    line-height: 0.8rem;
+    text-align: center;
+  }
+  .goo-bottom li img {
+    background: url(../img/icon.png) no-repeat;
+    float: right;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 10%;
+    margin-right: 10%;
+  }
+  .active {
+    color: #ea5858;
+  }
+  
+  
+  

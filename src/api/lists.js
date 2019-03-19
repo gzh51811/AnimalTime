@@ -58,8 +58,7 @@ Router.get('/', urlencodedParser, jsonParser, async (req, res) => {
             // 使用某个集合
             let { length, page } = req.query;
             let collecton = db.collection('list');
-            let data = await collecton.find().skip(page * length).limit(5).toArray();
-            console.log(111)
+            let data = await collecton.find().skip(page * length).limit(10).toArray();
             // let data= await db.find('list');
             client.close();
 
@@ -69,34 +68,31 @@ Router.get('/', urlencodedParser, jsonParser, async (req, res) => {
         })
     }
     //     //升序
-    //     if (zi == 'paixu') {
-    //         MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
-    //             if (err) throw err;
+    if (zi == 'paixu') {
+        MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
+            if (err) throw err;
+            let db = client.db('list'); //连接数据库
+            // 使用某个集合
+            let collecton = db.collection('list');
+            let data = await collecton.find().sort({ price: 1 }).toArray();
+            res.send(data);
+        })
 
-    //             let db = client.db('list'); //连接数据库
+    }
+    //降序
+    if (zi == 'jiangxu') {
+        MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
+            if (err) throw err;
 
-
-    //             // 使用某个集合
-    //             let collecton = db.collection('lists');
-    //             let data = await collecton.find().sort({ price: 1 }).toArray();
-    //             res.send(data);
-    //         })
-
-    //     }
-    //     //降序
-    //     if (zi == 'jiangxu') {
-    //         MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
-    //             if (err) throw err;
-
-    //             let db = client.db('list'); //连接数据库
+            let db = client.db('list'); //连接数据库
 
 
-    //             // 使用某个集合
-    //             let collecton = db.collection('lists');
-    //             let data = await collecton.find().sort({ price: -1 }).toArray();
-    //             res.send(data);
-    //         })
-
-
+            // 使用某个集合
+            let collecton = db.collection('list');
+            let data = await collecton.find().sort({ price: -1 }).toArray();
+            res.send(data);
+        })
+    }
 });
+
 module.exports = Router;
