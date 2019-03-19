@@ -8,11 +8,47 @@ const MongoClient = mongodb.MongoClient;
 //格式
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
 let jsonParser = bodyParser.json();
+
+Router.get('/', urlencodedParser, jsonParser, async (req, res) => {
+    let { shuju, id, value } = req.query;
+    let cid = id;
+
+    if (shuju == "update") {
+        MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
+            if (err) throw err;
+
+            let db = client.db('list'); //连接数据库
+            // 使用某个集合 
+            // let num=10;
+            let collecton = db.collection('cart');
+            let data_update = await collecton.updateOne({ id: cid }, { "$set": { qty: value } })
+            client.close();
+            // 查全部返回长度   
+            res.send(data_update)
+        })
+    }
+    ///数据渲染
+    if (shuju == 'xl') {
+        MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
+            if (err) throw err;
+
+            let db = client.db('list'); //连接数据库
+            // 使用某个集合
+            // let num=10;
+            let collecton = db.collection('cart');
+            let data = await collecton.find().limit(10).toArray();
+            // let data= await db.find('list');
+            client.close();
+            // 查全部返回长度
+            res.send(data)
+        })
+    }
+});
+
 //详情页添加购物车
 Router.post('/', urlencodedParser, jsonParser, async (req, res) => {
     let { params } = req.body;
     let { id, num, zi } = params;
-
     //购物车有该商品，更新数据
     if (zi == 'chaxun') {
         MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
@@ -25,7 +61,7 @@ Router.post('/', urlencodedParser, jsonParser, async (req, res) => {
             let data = await db.find('cart', { id: id }).toArray();
             let date = await db.find('list', { id: id })
             if (data.length > 0) {
-                let data_1 = await collecton.update({ "id": "id" }, { "$inc": { "qty": num } })
+                let data_1 = await collecton.update({ "id": id }, { "$inc": { "qty": num } })
                 // 查全部返回长度
                 res.send(data_1)
             } else {
@@ -36,6 +72,23 @@ Router.post('/', urlencodedParser, jsonParser, async (req, res) => {
             }
         })
     }
+
+});
+//详情页添加购物车
+Router.delete('/', urlencodedParser, jsonParser, async (req, res) => {
+    let { id } = req.query;
+    //购物车有该商品，更新数据
+    MongoClient.connect("mongodb://localhost:27017", async function (err, client) {
+        if (err) throw err;
+
+        let db = client.db('list'); //连接数据库
+        //连接集合
+        let collecton = db.collection('cart');
+        let data_1 = await collecton.deleteOne({ "id": id })
+        // 查全部返回长度
+        res.send(data_1)
+    })
+
 
 });
 module.exports = Router;

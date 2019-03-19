@@ -6,7 +6,10 @@ import './js/1.js'
 import router from './router';
 import MintUI from "mint-ui";
 import "mint-ui/lib/style.css";
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(MintUI);
+Vue.use(ElementUI);
 import { Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
