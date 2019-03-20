@@ -1,17 +1,17 @@
 <template>
   <div class="cart">
     <!-- 这是购物车 -->
-    <div class="wap-top-bar hide" style="display: block;">
+    <div class="wap-top-bar">
       <header class="ftc head-top bgfff zcolor rela">
         <div class="">
           <router-link to="/app/home" class="aback page-top go-back left-more">
           </router-link>
           <span class="ft18">购物车</span>
           <router-link to="/editcart" class="ft18 edit">编辑</router-link>
-          <img src="../img/imgtk-new.png" alt="" class="rttop">
+          <img src="../img/imgtk-new.png" alt="" class="rttop" @click="change">
         </div>
       </header>
-      <div class="header-quick header-quicknew  hide Jtk">
+      <div class="header-quick header-quicknew Jtk" v-show="showNav">
         <router-link to="/app/home">
           <span class="icon1"></span>
           <p>首页</p>
@@ -73,7 +73,7 @@
                   <div class="spli1 rela" data-reactid=".0.0.1:0.1:0.0.3.0">
                     <div class="cart-img rela overflow loadimg-fixed" data-reactid=".0.0.1:0.1:0.0.3.0.0">
                       <a href="/goods/201091.html" class="block" data-reactid=".0.0.1:0.1:0.0.3.0.0.0">
-                        <img :src="item.img" class="image" data-reactid=".0.0.1:0.1:0.0.3.0.0.0.0">
+                        <img :src="item.photo" class="image" data-reactid=".0.0.1:0.1:0.0.3.0.0.0.0">
                         <span data-reactid=".0.0.1:0.1:0.0.3.0.0.0.1"></span>
                       </a>
                     </div>
@@ -122,7 +122,7 @@
                   </div>
                 </label>
               </div>
-              <div class="no-buy fr ftc" data-reactid=".0.0.3.0.1" :style="{background:(this.selected.length>0)?'red':'#bdbdbd'}">
+              <div class="no-buy ftc pp" data-reactid=".0.0.3.0.1" :style="{background:(this.selected.length>0)?'red':'#bdbdbd'}">
                 <a href="javascript:;" class="afff ft14" data-reactid=".0.0.3.0.1.0">
                   <span data-reactid=".0.0.3.0.1.0.0">去结算(</span>
                   <span data-reactid=".0.0.3.0.1.0.1">{{totalnum()}}</span>
@@ -147,7 +147,9 @@ export default {
     return {
       shuju: "",
       selected: [],
-      goodlist: []
+      goodlist: [],
+      showNav: false,
+      scrollTop: 0
     };
   },
   computed: {
@@ -173,6 +175,9 @@ export default {
       });
   },
   methods: {
+    change() {
+      this.showNav = !this.showNav;
+    },
     select(idx) {
       // 获取idx在数组中的位置
 

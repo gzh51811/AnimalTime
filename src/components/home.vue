@@ -180,7 +180,7 @@
       </mt-swipe>
       <div class="activitive">
         <li>
-          <a href>
+          <a href="javascript:;">
             <img
               src="https://img1.epetbar.com/2019-03/11/14/dadadfaecbc9f11c3517af08f5d1c429.png@!water"
               alt
@@ -188,7 +188,7 @@
           </a>
         </li>
         <li>
-          <a href>
+          <a href="javascript:;">
             <img
               src="https://img1.epetbar.com/2019-03/11/14/f779f984f7247d3b44577d74efe67a9d.png@!water"
               alt
@@ -196,7 +196,7 @@
           </a>
         </li>
         <li>
-          <a href>
+          <a href="javascript:;">
             <img
               src="https://img1.epetbar.com/2019-03/11/14/fda0143865b0a9bc8e886c3709c1cd2d.png@!water"
               alt
@@ -204,7 +204,7 @@
           </a>
         </li>
         <li>
-          <a href>
+          <a href="javascript:;">
             <img
               src="https://img1.epetbar.com/2019-03/13/11/5c5089f8fba7c165dfb33886cfe88338.png@!water"
               alt
@@ -212,7 +212,7 @@
           </a>
         </li>
         <li>
-          <a href>
+          <a href="javascript:;">
             <img
               src="https://img1.epetbar.com/2019-03/13/15/1128128e6983f8292da43171da0e4bd1.png@!water"
               alt
@@ -285,7 +285,7 @@
                 <li data-v-39928ef1 class="rela">
                   <a
                     data-v-39928ef1
-                    href="https://wap.epet.com/surprise/Main.html?pet_type=dog&amp;tid=10:00"
+                    href="javascript:;"
                     class="db ml10"
                   >
                     <img
@@ -312,7 +312,7 @@
                 <li data-v-39928ef1 class="rela">
                   <a
                     data-v-39928ef1
-                    href="https://wap.epet.com/surprise/Main.html?pet_type=dog&amp;tid=10:00"
+                    href="javascript:;"
                     class="db ml10"
                   >
                     <img
@@ -354,7 +354,7 @@
                 <li data-v-39928ef1 class="rela">
                   <a
                     data-v-39928ef1
-                    href="https://wap.epet.com/app/group/main?pettype=dog"
+                    href="javascript:;"
                     class="db ml10"
                   >
                     <img
@@ -375,7 +375,7 @@
                 <li data-v-39928ef1 class="rela">
                   <a
                     data-v-39928ef1
-                    href="https://wap.epet.com/app/group/main?pettype=dog"
+                    href="javascript:;"
                     class="db ml10"
                   >
                     <img
@@ -547,13 +547,13 @@
         <div data-v-6583b104 class="ft14 ftc">
           <span data-v-6583b104 class="pr10 cf0">触屏版</span>
           <span data-v-6583b104 class="pr10">
-            <a data-v-6583b104 href="https://wap.epet.com/app.html">手机客户端</a>
+            <a data-v-6583b104 href="javascript:;">手机客户端</a>
           </span>
           <span data-v-6583b104 class="pr10">
-            <a data-v-6583b104 href="https://wap.epet.com/AboutEpet.html">关于我们</a>
+            <a data-v-6583b104 href="javascript:;">关于我们</a>
           </span>
           <span data-v-6583b104 class="pr10">
-            <a data-v-6583b104 href="https://wap.epet.com/faq.html">联系我们</a>
+            <a data-v-6583b104 href="javascript:;">联系我们</a>
           </span>
         </div>
         <div data-v-6583b104 class="ftc ft12">© wap.epet.com 版权：重庆易宠科技有限公司</div>

@@ -277,7 +277,7 @@
         </div>
         <span class="ft">购物车</span>
       </div>
-      <div class="bottom22" @click="golist()">加入购物车</div>
+      <div class="bottom22" @click="golist(),gotoCarts(list)">加入购物车</div>
     </section>
     <div v-show="fes" class="black"></div>
     <div v-show="fes" class="menu">
@@ -331,10 +331,26 @@ export default {
       }
     },
     goto(id, num1) {
-      this.$router.push({ name: "Cart", query: { id }, params: { id }, num1 });
+      this.$router.push('app/cart');
     },
     gotolist() {
       this.$router.push("/list");
+    },
+    gotoCarts() {
+      let { id: id } = this.$route.query;
+      let num=this.num1;
+      this.$axios
+        .post("http://localhost:5200/api/cart", {
+          params: {
+            id,
+            num
+          }
+        })
+        .then(res => {
+          console.log(res);
+          console.log(id)
+          console.log(num)
+        });
     }
   },
 

@@ -8,10 +8,10 @@
           </router-link>
           <span class="ft18">购物车</span>
           <router-link to="/app/cart" class="ft18 edit">完成</router-link>
-          <img src="../img/imgtk-new.png" alt="" class="rttop">
+          <img src="../img/imgtk-new.png" alt="" class="rttop" @click="change">
         </div>
       </header>
-      <div class="header-quick header-quicknew  hide Jtk">
+      <div class="header-quick header-quicknew Jtk" v-show='showNav'>
         <router-link to="/app/home">
           <span class="icon1"></span>
           <p>首页</p>
@@ -73,7 +73,7 @@
                   <div class="spli1 rela" data-reactid=".0.0.1:0.1:0.0.3.0">
                     <div class="cart-img rela overflow loadimg-fixed" data-reactid=".0.0.1:0.1:0.0.3.0.0">
                       <a href="/goods/201091.html" class="block" data-reactid=".0.0.1:0.1:0.0.3.0.0.0">
-                        <img :src="item.img" class="image" data-reactid=".0.0.1:0.1:0.0.3.0.0.0.0">
+                        <img :src="item.photo" class="image" data-reactid=".0.0.1:0.1:0.0.3.0.0.0.0">
                         <span data-reactid=".0.0.1:0.1:0.0.3.0.0.0.1"></span>
                       </a>
                     </div>
@@ -138,10 +138,12 @@ export default {
     return {
       shuju: "",
       selected: [],
-      goodlist: []
+      goodlist: [],
+      showNav: false
     };
   },
   computed: {
+    
     checkAll: {
       get() {
         return this.goodlist.every((item, idx) => this.selected.includes(idx));
@@ -170,11 +172,12 @@ export default {
       .then(res => {
         let data = res.data;
         this.goodlist = data;
-        if ((this.goodlist.length = 0)) {
-        }
-      });
+      })
   },
   methods: {
+    change(){
+      this.showNav=!this.showNav
+    },
     select(idx) {
       // 获取idx在数组中的位置
 
@@ -186,39 +189,35 @@ export default {
         this.selected.push(idx);
       }
     },
-    //删除数量
-
     //删除
     remove() {
       for (var i = this.selected.length - 1; i >= 0; i--) {
-        var res = confirm("您真的要删除吗？");
-        if (res) {
-          let id = this.goodlist[this.selected[i]].id;
-          this.$axios
-            .delete("http://localhost:5200/api/cart", {
-              params: {
-                id
-              }
-            })
-            .then(res => {
-              let rr = res.data.n;
-              if (rr == 1) {
-                alert("删除成功");
-              }
-            }),
-            this.goodlist.splice(this.selected[i], 1);
-        }
+        let id = this.goodlist[this.selected[i]].id;
+        this.$axios
+          .delete("http://localhost:5200/api/cart", {
+            params: {
+              id
+            }
+          })
+          .then(res => {
+            console.log(1)
+            let rr = res.data.ok;
+            if (rr == 1) {
+              alert("删除成功");
+            }
+          });
+        this.goodlist.splice(this.selected[i], 1);
       }
-    },
-    handleChange(value, id) {
-      this.$axios.get("http://localhost:5200/api/cart", {
-        params: {
-          shuju: "update",
-          value,
-          id
-        }
-      });
     }
+  },
+  handleChange(value, id) {
+    this.$axios.get("http://localhost:5200/api/cart", {
+      params: {
+        shuju: "update",
+        value,
+        id
+      }
+    });
   }
 };
 </script>
