@@ -1,0 +1,43 @@
+.backico{
+    font-size: 22px;
+    height: 40px;
+    color: #999;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-top: 20px;
+    line-height: 22px;
+}
+.padmain{
+    padding: 10px 40px;
+}
+
+.inputStyle{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    padding: 25px 0px;
+    border-bottom: 1px solid #d0d0d0;
+    height: 30px;
+    outline: none;
+}
+
+.dark-btn{
+    background: #f0f0f0;
+    color: #bfbfbf;
+    width: 100%;
+    line-height: 50px;
+    margin-top: 40px;
+    
+}
+
+.pad10{
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+
+.aminated{
+    animation-fill-mode: both;
+}

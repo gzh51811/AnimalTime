@@ -1,0 +1,29 @@
+.round5{
+    border-radius: 30px;
+}
+
+.ft12 .fl{
+    float: left;
+    padding-left: 40px;
+}
+
+.fr{
+    float: right;
+    padding-right: 40px;
+}
+
+.w100{
+    width: 100%;
+}
+
+
+.loginther a{
+    width: 50%;
+    text-align: center;
+}
+
+.loginther img{
+    width: 30px;
+    height: 100%;
+    margin: 0 auto;
+}

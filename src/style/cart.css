@@ -152,15 +152,6 @@ a {
     padding: 1em;
 }
 .checkbox input {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    border-radius: 50%;
-    outline: 0!important;
     float: left;
 }
 .checkbox label {
@@ -223,9 +214,6 @@ em {
 }
 .pl {
     padding-left: 1em;
-}
-.mycart-pro input {
-    margin-top: 40px;
 }
 .cart-proli {
     border-bottom: 1px solid #ebebeb;
@@ -345,7 +333,7 @@ b {
     margin: 0;
     border-radius: 0;
 }
-.cart_buynum_txt input[type="text"] {
+.cart_buynum_txt {
     margin-top: 0;
     border-radius: 0;
     border: none;
@@ -357,27 +345,6 @@ b {
     position: inherit;
     text-align: center;
     margin: 0;
-}
-.checkbox input {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    border-radius: 50%;
-    outline: 0!important;
-    float: left;
-}
-input[type="text"] {
-    height: 30px;
-    -webkit-appearance: none;
-    padding: 0 15px;
-    background-color: #fff;
-    border: 1px solid #d0d0d0;
-    border-radius: 3px;
-    outline: none;
 }
 .buynum-wrap .addnum {
     line-height: 15px;
@@ -474,4 +441,48 @@ input[type="text"] {
     display: inline-block;
     font-size: 13px;
     margin-top: 0px;
+    position: relative;
+    position: absolute;
 }
+.m-emptycoupon {
+    padding-bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: table;
+    z-index: -1;
+    top: 0;
+    padding-top: 2.666667rem;
+    padding-left: 3rem; 
+}
+.emptydiv {
+    display: table-cell;
+    vertical-align: middle;
+}
+.emttip {
+    color: #666;
+}
+.ft16 {
+    font-size: 1.6em;
+}
+.u-emtcoupon {
+    margin: 0;
+    background: url(../img/empty.png) no-repeat center center;
+    background-size: auto 100%;
+    width: 100%;
+    height: 110px;
+    display: inline-block;
+}
+.mt20 {
+    margin-top: 2em;
+}
+.emt-a a {
+    border: 1px solid #f03e3e;
+    color: #f03e3e;
+    border-radius: 30px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+}
+

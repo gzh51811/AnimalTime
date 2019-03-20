@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    line-height: 50px;
+    color: #333;
+    position: relative;
+}
+.headerText{
+    text-align: center;
+    margin: 0 65px;
+}
+.headerBox .textover{
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    font-size: 18px;
+}
+.headerBox .left-back{
+    width: 35px;
+    height: 35px;
+    background: url(../img/topIco.bc556dcf.png) 0 0 no-repeat;
+    background-size: 35px auto;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    background-position: 0 0;
+}
+.headerBox .right-more{
+    width: 35px;
+    height: 35px;
+    background: url(../img/topIco.bc556dcf.png) 0 0 no-repeat;
+    background-size: 35px auto;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    background-position: 0 -70px;
+}
+
+
+
+
+.userinfo .pt15{
+    padding-top: 15px;
+}
+.userinfo .pt15 .fl{
+    margin-left: 5px;
+    float: left;
+}
+.userinfo .pt15 .fl .db{
+    display: block;
+}
+a img{
+    width: 50%;
+}
+.mt15{
+    margin-top: 15px;
+}
+
+.user_info{
+    margin: 30px 0;
+}
+
+.userinfo{
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    background: tomato;
+    
+}
+.userinfo .username{
+    margin-left: 80px;
+    padding-top: 8px;
+}
+.userinfo .userphoto img{
+    width: 70px;
+    height: 70px;
+}
+
+
+
+
+
+.vipcon{
+    margin: 30px 0;
+    background: #252525;
+    border-radius: 15px 15px 0px 0px;
+}
+.vipcon img{
+    width: 100%;
+}
+
+.myorder{
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+.myorder .title img{
+    height: 16px;
+}
+.myorder .liimg img{
+    width: 35%;
+}
+
+
+.wallet{
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+.wallet .title img{
+    height: 16px;
+}
+
+
+
+
+.myservice{
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.myservice .title img{
+    height: 16px;
+}
+
+.myservice .liimg img{
+    width: 35%;
+}
