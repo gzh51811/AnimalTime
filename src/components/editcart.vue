@@ -16,7 +16,7 @@
           <span class="icon1"></span>
           <p>首页</p>
         </router-link>
-        <router-link to="/app/list">
+        <router-link to="/app/lists">
           <span class="icon2"></span>
           <p>商品分类</p>
         </router-link>
@@ -139,11 +139,10 @@ export default {
       shuju: "",
       selected: [],
       goodlist: [],
-      showNav: false
+      showNav: ture
     };
   },
   computed: {
-    
     checkAll: {
       get() {
         return this.goodlist.every((item, idx) => this.selected.includes(idx));
@@ -172,11 +171,11 @@ export default {
       .then(res => {
         let data = res.data;
         this.goodlist = data;
-      })
+      });
   },
   methods: {
-    change(){
-      this.showNav=!this.showNav
+    change() {
+      this.showNav = !this.showNav;
     },
     select(idx) {
       // 获取idx在数组中的位置
@@ -200,7 +199,7 @@ export default {
             }
           })
           .then(res => {
-            console.log(1)
+            console.log(1);
             let rr = res.data.ok;
             if (rr == 1) {
               alert("删除成功");

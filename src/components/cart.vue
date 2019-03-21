@@ -16,7 +16,7 @@
           <span class="icon1"></span>
           <p>首页</p>
         </router-link>
-        <router-link to="/app/list">
+        <router-link to="/app/lists">
           <span class="icon2"></span>
           <p>商品分类</p>
         </router-link>
@@ -142,6 +142,9 @@
   </div>
 </template>
 <script>
+/*引入公共方法*/
+
+import { setCookie, getCookie } from "../js/cookie.js";
 export default {
   data() {
     return {
@@ -149,7 +152,8 @@ export default {
       selected: [],
       goodlist: [],
       showNav: false,
-      scrollTop: 0
+      scrollTop: 0,
+      name: ""
     };
   },
   computed: {
@@ -162,7 +166,11 @@ export default {
       }
     }
   },
-  created() {
+  created() {    
+    // console.log(localStorage.getItem("token"))
+    if (localStorage.getItem("token")==null) {
+      this.$router.push("/login");
+    }
     this.$axios
       .get("http://localhost:5200/api/cart", {
         params: {
@@ -215,6 +223,7 @@ export default {
       });
     }
   }
+  
 };
 </script>
 

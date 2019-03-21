@@ -24,7 +24,11 @@ h5,
 h6 {
     font-weight: 400
 }
-
+.search .sh{
+    display: inline-block;
+    width: 60%;
+    font-size: .32rem;
+}
 .ftr {
     text-align: right
 }

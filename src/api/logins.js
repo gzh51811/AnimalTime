@@ -2,36 +2,33 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
 const Router = express.Router();
+const { create } = require('./token');
 const MongoClient = mongodb.MongoClient;
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-Router.post('/', urlencodedParser, (req, res) => {
+let jsonParser =bodyParser.json();
+Router.post('/', urlencodedParser,jsonParser,async (req, res) => {
     //获取前端数据
-    let { nickname, password } = req.body;
-    console.log(nickname);
-    MongoClient.connect('mongodb://127.0.0.1:27017', { useNewUrlParser: true }, (err, database) => {
+    let {user,psw}=req.body;
+    MongoClient.connect('mongodb://127.0.0.1:27017',async (err, client) => {
         if (err) throw err;
-        let db = database.db('vipcars');
+        let db = client.db('list');
         let admin = db.collection('user');
-        admin.findOne({ nickname, password }, (err, result) => {
-            let data;
-            let cid = result.cid;
-            let _id = result._id;
-            console.log(_id);
-            if (result) {
-                data = {
-                    code: 0,
-                    msg: 'ok',
-                    cid,
-                    _id
-                }
-            } else {
-                data = {
-                    code: 1,
-                    msg: 'fail',
-                }
-            }
-            res.send(data);
-        });
+        let data = await admin.findOne({user});
+
+
+        let _token = create(data.user);
+
+
+
+        if(user == data.user && psw == data.psw){
+            res.send({
+                    msg: 'success',
+                    _token
+                });
+        }else{
+            res.send('unsuccess');
+        }
+      
     });
 });
 module.exports = Router;

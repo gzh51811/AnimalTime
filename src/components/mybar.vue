@@ -31,7 +31,6 @@
     </div>
 
 
-    <!------------------------------------------------------------>
     <div class="userinfo">
         <div class="clearfix operation pt15 ftc">
             <div class="fl ml5">
@@ -46,15 +45,15 @@
             </div> 
             <div class="clearfix pl10 pr10 user_info">
                 <div class="userphoto fl">
-                    <a href="" class="db">
+                    <a href="" class="db" >
                         <img src="https://static.epetbar.com/static_wap/appmall/avatar/cat.png"></a></div> <div data-v-2f7aef8e="" class="username"><div data-v-2f7aef8e="" class="cfff ft16"></div> <!----> <div data-v-2f7aef8e="" class="grade nologin mt15">
-                        <a href="">
-                            <span class="cfff">登录</span>
+                        <a href="#/login">
+                            <span class="cfff">{{login}}</span>
                         </a> 
                         <span class="cfff">│</span> 
-                        <a href="/app/register">
-                            <span class="cfff">注册</span>
-                        </a>
+                        <a href="#/register">
+                            <span class="cfff" @click="checkout">{{reg}}</span>
+                    </a>
                     </div>
                 </div>
             </div> 
@@ -62,7 +61,7 @@
                 <div class="vipcon pt5 pb5 pr20 clearfix">
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc">
-                            <div class="liimg rela ml20">
+                            <div class="rela ml20">
                                 <img src="https://img2.epetbar.com/nowater/2018-11/22/08/71ff7f9ee43b98e8c68cb150f3f03169.png"> 
                                 <!----> <!---->
                             </div>
@@ -70,21 +69,21 @@
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc">
-                            <div class="liimg rela ml20">
+                            <div class="rela ml20">
                                 <img src="https://img2.epetbar.com/nowater/2018-11/22/08/d3d0bc1a081b6f0412b6f045863865be.png"> <!----> <!---->
                             </div>
                         </a>
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc">
-                            <div class="liimg rela ml20">
+                            <div class="rela ml20">
                                 <img src="https://img2.epetbar.com/nowater/2018-11/22/08/e6f08976d0cf4a51d7eb209ba4c89df7.png"> <!----> <!---->
                             </div>
                         </a>
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc">
-                            <div class="liimg rela ml20">
+                            <div class="rela ml20">
                                 <img src="https://img2.epetbar.com/nowater/2019-01/31/14/de8b18448de149a49288d3a2f6be91fe.png"> <!----> <!---->
                             </div>
                         </a>
@@ -112,7 +111,7 @@
                     <div class="clearfix mt20 pb10">
                         <div class="fl" style="width: 20%;">
                             <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc orederli">
-                                <div class="liimg rela">
+                                <div class="rela">
                                     <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/fb45b8f54a662a0574c941ffb4de2d88.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/fb45b8f54a662a0574c941ffb4de2d88.png" lazy="loaded"> <!----> <!---->
                                 </div> 
                                 <div class="ft12 ftc ell mt5">待付款</div>
@@ -120,7 +119,7 @@
                         </div>
                         <div class="fl" style="width: 20%;">
                             <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc orederli">
-                                <div class="liimg rela">
+                                <div class="rela">
                                     <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/51435308ce6c089a450fd3ab77a5520b.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/51435308ce6c089a450fd3ab77a5520b.png" lazy="loaded"> <!----> <!---->
                                 </div> 
                                 <div class="ft12 ftc ell mt5">待收货</div>
@@ -128,7 +127,7 @@
                         </div>
                         <div class="fl" style="width: 20%;">
                             <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc orederli">
-                                <div class="liimg rela">
+                                <div class="rela">
                                     <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/e0aac3c323912454b6b0c4222d3c0edd.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/e0aac3c323912454b6b0c4222d3c0edd.png" lazy="loaded"> <!----> <!---->
                                 </div> 
                                 <div class="ft12 ftc ell mt5">待评价</div>
@@ -136,7 +135,7 @@
                         </div>
                         <div class="fl" style="width: 20%;">
                             <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc orederli">
-                                <div class="liimg rela">
+                                <div class="rela">
                                     <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/c3109afb1d05a016e31394cff7e6bb99.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/c3109afb1d05a016e31394cff7e6bb99.png" lazy="loaded"> <!----> <!---->
                                 </div> 
                                 <div class="ft12 ftc ell mt5">退换记录</div>
@@ -144,7 +143,7 @@
                         </div>
                         <div class="div_line fl" style="width: 20%;">
                             <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc orederli">
-                                <div class="liimg rela">
+                                <div class="rela">
                                     <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/77d6a175fa1a030b57826f7c5bcda252.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/77d6a175fa1a030b57826f7c5bcda252.png" lazy="loaded"> <!----> <!---->
                                 </div> 
                                 <div class="ft12 ftc ell mt5">国际订单</div>
@@ -174,7 +173,7 @@
                 <div class="clearfix mt20">
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela"><!----> 
+                            <div class="rela"><!----> 
                                 <span class="bold ft14 cred">0</span> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">优惠券</div>
@@ -182,7 +181,7 @@
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela"><!----> 
+                            <div class="rela"><!----> 
                                 <span class="bold ft14 cred">0</span> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">E宠币</div>
@@ -190,7 +189,7 @@
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela"><!----> 
+                            <div class="rela"><!----> 
                                 <span class="bold ft14 cred">0.00</span> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">余额</div>
@@ -198,7 +197,7 @@
                     </div>
                     <div class="fl" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela"><!----> 
+                            <div class="rela"><!----> 
                                 <span class="bold ft14 cred">0.00</span> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">红包</div>
@@ -227,7 +226,7 @@
                 <div class="clearfix mt20">
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/16/4322689f4d28ec8ba8e4eff73a333803.png" src="https://img2.epetbar.com/nowater/2018-11/28/16/4322689f4d28ec8ba8e4eff73a333803.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">联系客服</div>
@@ -235,7 +234,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/17/d3813a6151551b28c2b34c358f4afd3c.png" src="https://img2.epetbar.com/nowater/2018-11/28/17/d3813a6151551b28c2b34c358f4afd3c.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">潮品预售</div>
@@ -243,7 +242,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/5e73c64777a9468146843c538aad2543.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/5e73c64777a9468146843c538aad2543.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">我的团购</div>
@@ -251,7 +250,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/17/42ae00bbb4a33fa804b0d852e0233c19.png" src="https://img2.epetbar.com/nowater/2018-11/28/17/42ae00bbb4a33fa804b0d852e0233c19.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">我的收藏</div>
@@ -259,7 +258,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/17/97a4b02ff70fe492684838bf022d6cc9.png" src="https://img2.epetbar.com/nowater/2018-11/28/17/97a4b02ff70fe492684838bf022d6cc9.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">随手送礼</div>
@@ -267,7 +266,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/8563e3584dd6756bdd0ad23e3ee808e7.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/8563e3584dd6756bdd0ad23e3ee808e7.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">我的兑换</div>
@@ -275,7 +274,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/17/c2a952ea1e481e67f7f0223574b93afd.png" src="https://img2.epetbar.com/nowater/2018-11/28/17/c2a952ea1e481e67f7f0223574b93afd.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">我的关注</div>
@@ -283,7 +282,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/22/09/928fe6cbd944c114206ace04f9094489.png" src="https://img2.epetbar.com/nowater/2018-11/22/09/928fe6cbd944c114206ace04f9094489.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">萌爪联盟</div>
@@ -291,7 +290,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2018-11/28/17/1574544034bb0653a49d69c337a2db3c.png" src="https://img2.epetbar.com/nowater/2018-11/28/17/1574544034bb0653a49d69c337a2db3c.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div class="ft12 ftc ell mt5">我的捐赠</div>
@@ -299,7 +298,7 @@
                     </div>
                     <div class="fl mb10 mt10" style="width: 25%;">
                         <a href="javascript:mode_login('您还未登录，请先登录');" class="db ftc pl5 pr5">
-                            <div class="liimg rela">
+                            <div class="rela">
                                 <img data-src="https://img2.epetbar.com/nowater/2019-01/10/17/18bd0640beaff4eaa8ee6b1956ddeefa.png" src="https://img2.epetbar.com/nowater/2019-01/10/17/18bd0640beaff4eaa8ee6b1956ddeefa.png" lazy="loaded"> <!----> <!---->
                             </div> 
                             <div data-v-7ef4b672="" class="ft12 ftc ell mt5">商务合作</div>
@@ -314,25 +313,40 @@
 
 
 <script>
-/*引入公共方法*/
-import { setCookie, getCookie } from "../js/cookie.js";
-export default {
-  data() {
-    return {
-      name: ""
-    };
-  },
-  mounted() {
-    /*页面挂载获取保存的cookie值，渲染到页面上*/
-    let uname = getCookie("username");
-    this.name = uname;
-    /*如果cookie不存在，则跳转到登录页*/
-    if (uname == "") {
-      this.$router.push("/");
+    export default {
+        data() {
+            return {
+                login: '登录',
+                reg: '注册'
+            }
+        },
+        mounted() {
+           
+            if(localStorage.getItem("token")) {
+                //登录状态
+                this.login = localStorage.getItem("user");
+                this.reg = '退出'
+            }
+        }
+        ,methods: {
+            checkout() {
+                if(localStorage.getItem("token")) {
+                //登录状态
+                this.login = '登录';
+                this.reg = '注册'
+                localStorage.removeItem("user");
+                localStorage.removeItem("token");
+            }
+            }
+        }
     }
-  }
-};
+
+
+
 </script>
+
+
+
 <style scoped>
 @import url(../style/user.css);
 @import url(../style/qq.css);

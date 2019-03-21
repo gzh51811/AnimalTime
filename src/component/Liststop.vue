@@ -97,7 +97,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 @import url(../style/Liststop.css);
 </style>
 
