@@ -50,7 +50,7 @@ export default {
       this.aaa = this.goodlist[idx];
       let center = {};
       this.$axios
-        .get("http://localhost:5200/api/listss", {
+        .get("http://47.103.65.186:5200/api/listss", {
           params: {
             id: this.fiexd
           }
@@ -69,7 +69,7 @@ export default {
   },
   created() {
     this.$axios
-      .get("http://localhost:5200/api/listss", {
+      .get("http://47.103.65.186:5200/api/listss", {
         params: {
           id: 0
         }
@@ -82,7 +82,7 @@ export default {
         // console.log(this.right);
       });
     this.$axios
-      .get("http://localhost:5200/api/lists", {
+      .get("http://47.103.65.186:5200/api/lists", {
         params: {
           zi: "xuanran"
         }
@@ -97,7 +97,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 @import url(../style/Liststop.css);
 </style>
 

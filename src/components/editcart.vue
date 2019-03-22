@@ -11,12 +11,12 @@
           <img src="../img/imgtk-new.png" alt="" class="rttop" @click="change">
         </div>
       </header>
-      <div class="header-quick header-quicknew Jtk" v-show='showNav'>
+      <div class="header-quick header-quicknew Jtk" v-show="showNav">
         <router-link to="/app/home">
           <span class="icon1"></span>
           <p>首页</p>
         </router-link>
-        <router-link to="/app/list">
+        <router-link to="/app/lists">
           <span class="icon2"></span>
           <p>商品分类</p>
         </router-link>
@@ -143,7 +143,6 @@ export default {
     };
   },
   computed: {
-    
     checkAll: {
       get() {
         return this.goodlist.every((item, idx) => this.selected.includes(idx));
@@ -164,7 +163,7 @@ export default {
   },
   created() {
     this.$axios
-      .get("http://localhost:5200/api/cart", {
+      .get("http://47.103.65.186:5200/api/cart", {
         params: {
           shuju: "xl"
         }
@@ -172,11 +171,11 @@ export default {
       .then(res => {
         let data = res.data;
         this.goodlist = data;
-      })
+      });
   },
   methods: {
-    change(){
-      this.showNav=!this.showNav
+    change() {
+      this.showNav = !this.showNav;
     },
     select(idx) {
       // 获取idx在数组中的位置
@@ -194,13 +193,13 @@ export default {
       for (var i = this.selected.length - 1; i >= 0; i--) {
         let id = this.goodlist[this.selected[i]].id;
         this.$axios
-          .delete("http://localhost:5200/api/cart", {
+          .delete("http://47.103.65.186:5200/api/cart", {
             params: {
               id
             }
           })
           .then(res => {
-            console.log(1)
+            console.log(1);
             let rr = res.data.ok;
             if (rr == 1) {
               alert("删除成功");
@@ -211,7 +210,7 @@ export default {
     }
   },
   handleChange(value, id) {
-    this.$axios.get("http://localhost:5200/api/cart", {
+    this.$axios.get("http://47.103.65.186:5200/api/cart", {
       params: {
         shuju: "update",
         value,

@@ -10,11 +10,11 @@
                     <a class="zcolor topbar-link ">
                     </a>
                 </div>
-                <span class="mla pull-right Jbur ml J_bur right-more">
+                <span class="mla pull-right Jbur ml J_bur right-more" @click="change">
                 </span>
             </div>
         </header>
-        <div class="header-quick header-quicknew  hide Jtk" style="display:block">
+        <div class="header-quick header-quicknew Jtk" v-show="showNav">
             <a href="javascript:;">
                 <span class="icon1"></span>
                 <p>首页</p>
@@ -119,59 +119,6 @@
                     </div>
                 </div>
             </div>
-            <div class="bgfff mt5 pt15 pb15 border-b relative">
-                <label for="switchCP" class="qpetSelect">
-                    <input id="switchCP" checked="checked" type="checkbox" value="狗狗" class="weui-switch-cp__input">
-                    <div class="qpetSelectBox relative ftc ft12">
-                        <div>狗狗</div>
-                        <div>猫猫</div>
-                    </div>
-                </label>
-                <div class="swiper-container qpetMenu pt15 pl15 swiper-container-horizontal">
-                    <div class="swiper-wrapper">
-                        <div indexitem="0" class="swiper-slide textover active swiper-slide-active" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://static.epetbar.com/static_web/wap/src/images/qpet/app/trial/all.png">
-                            <span class="vertical">全部</span>
-                        </div>
-                        <div indexitem="1" class="swiper-slide textover swiper-slide-next" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://static.epetbar.com/static_web/wap/src/images/qpet/app/trial/handpick.png">
-                            <span class="vertical">精选</span>
-                        </div>
-                        <div indexitem="2" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/09/3f04c26a090de46ce6d11abea6f37f7d.png">
-                            <span class="vertical">主粮</span>
-                        </div>
-                        <div indexitem="3" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/09/41fda4a6a885c469a53a90f9e7765433.png">
-                            <span class="vertical">零食</span>
-                        </div>
-                        <div indexitem="4" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/09/94204f6bcda3b256b3b19f68192875d7.png">
-                            <span class="vertical">玩具</span>
-                        </div>
-                        <div indexitem="5" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/11/b5984812aafc4a212e84388cac7b5bf0.png">
-                            <span class="vertical">保健</span>
-                        </div>
-                        <div indexitem="6" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/11/f14dfe5f9b85137cdbc17405c16a0efe.png">
-                            <span class="vertical">医疗</span>
-                        </div>
-                        <div indexitem="7" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/11/215dfed5fd7f2b81d2d0e2e676becb96.png">
-                            <span class="vertical">日用</span>
-                        </div>
-                        <div indexitem="8" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/11/ca00aa378295aaa0ea5172023741b658.png">
-                            <span class="vertical">出行</span>
-                        </div>
-                        <div indexitem="9" class="swiper-slide textover" style="width: 68.3333px; margin-right: 15px;">
-                            <img src="https://img2.epetbar.com/nowater/2018-01/31/11/005c5e4e02ad90aa3f05919f8c67a1fb.png">
-                            <span class="vertical">香波</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div>
                 <ul class="qpetList2">
                     <li v-for="(ka,idx) in goodlist" :key="idx">
@@ -216,12 +163,13 @@ export default {
   data() {
     return {
       shuju: "",
-      goodlist: {}
+      goodlist: {},
+      showNav: false
     };
   },
   created() {
     this.$axios
-      .get("http://localhost:5200/api/pinlun", {
+      .get("http://47.103.65.186:5200/api/pinlun", {
         params: {
           shuju: "xl"
         }
@@ -233,6 +181,11 @@ export default {
         this.goodlist = data;
         console.log(this.goodlist);
       });
+  },
+  methods:{
+    change() {
+      this.showNav = !this.showNav;
+    }
   }
 };
 </script>

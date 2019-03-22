@@ -1,7 +1,14 @@
+body{
+    background: #fff;
+}
+
 .round5{
     border-radius: 30px;
 }
-
+.ft12{
+    background: #fff;
+    padding-top: 5px;
+}
 .ft12 .fl{
     float: left;
     padding-left: 40px;

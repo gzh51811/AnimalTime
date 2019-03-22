@@ -13,7 +13,7 @@
         <a data-v-6583b104 href="javascript:;" class="db it1 bgfff80 round30 mr15">
           <div data-v-6583b104>
             <img data-v-6583b104 src="../img/search.png" class="searchimg dib ml15">
-            <span data-v-6583b104 class="dib ft12 c666">请输入搜索内容</span>
+            <span data-v-6583b104 class="dib c666 sh">请输入搜索内容</span>
           </div>
         </a>
         <p data-v-6583b104 class="rela">

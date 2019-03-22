@@ -103,7 +103,7 @@ export default {
     check() {
       if (this.text == true)
         this.$axios
-          .get("http://localhost:5200/api/lists", {
+          .get("http://47.103.65.186:5200/api/lists", {
             params: {
               zi: "paixu"
             }
@@ -117,7 +117,7 @@ export default {
           });
       else {
         this.$axios
-          .get("http://localhost:5200/api/lists", {
+          .get("http://47.103.65.186:5200/api/lists", {
             params: {
               zi: "jiangxu"
             }
@@ -138,7 +138,7 @@ export default {
     },
     moren() {
       this.$axios
-        .get("http://localhost:5200/api/lists", {
+        .get("http://47.103.65.186:5200/api/lists", {
           params: {
             zi: "shuju"
           }
@@ -203,7 +203,7 @@ export default {
         // console.log(this.length);
         if (this.start) {
           let res = await this.$axios
-            .get("http://localhost:5200/api/lists", {
+            .get("http://47.103.65.186:5200/api/lists", {
               params: {
                 zi: "lanjiazai",
                 page: ++this.page,
@@ -244,7 +244,7 @@ export default {
   // 初始化数据
   created() {
     this.$axios
-      .get("http://localhost:5200/api/lists", {
+      .get("http://47.103.65.186:5200/api/lists", {
         params: {
           zi: "shuju"
         }

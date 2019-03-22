@@ -54,6 +54,9 @@
     margin-left: 5px;
     float: left;
 }
+.userinfo .pt15 .fr{
+   padding-right: 0px;
+}
 .userinfo .pt15 .fl .db{
     display: block;
 }

@@ -5,8 +5,8 @@ const Router = express.Router();
 //插入用户
 Router.route('/')
     .get(async (req, res) => {
-        let { nickname } = req.query;
-        let result = await db.find('user', {}, { nickname });
+        let { username } = req.query;
+        let result = await db.find('user', {}, { username });
         if ((result.data).length > 0) {
             res.send('yes');
         } else {

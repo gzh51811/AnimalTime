@@ -14,7 +14,7 @@ import Good from '../pages/good'
 import Goods from '../pages/goods'
 import List from '../pages/list'
 import Login from '../pages/login'
-import Reg from '../pages/reg'
+import register from '../pages/register'
 import axios from "axios";
 Vue.prototype.$axios = axios;
 
@@ -107,24 +107,12 @@ let router = new VueRouter({
             name: 'Login',
             path: '/login',
             component: Login,
-            beforeEnter(to, from, next) {
-                // 鸿姐这里自己换, 我只是用了localStorage存 你弄一个token
-                // 这里是单个路由的独享
-                let username = localStorage.getItem('username')
-                if (username) {
-                    next({
-                        name: 'Home'
-                    })
-                } else {
-                    next();
-                }
-            }
         },
         {
             // 注册的路由
-            name: 'Reg',
-            path: '/reg',
-            component: Reg
+            name: 'register',
+            path: '/register',
+            component: register
         },
         {
             // 评论区域的路由

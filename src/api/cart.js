@@ -84,7 +84,7 @@ Router.post('/', urlencodedParser, jsonParser, async (req, res) => {
             let dbw = client.db('list');//连接数据库
             let collection = dbw.collection('cart')
             let data2 = date[0];
-            let date1 = await collection.insert({ ...data2, 'qty': num });
+            let date1 = await collection.insertMany({ ...data2, 'qty': num });
             res.send(date1)
         }
     });
