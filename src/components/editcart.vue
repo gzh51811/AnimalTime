@@ -207,9 +207,8 @@ export default {
           });
         this.goodlist.splice(this.selected[i], 1);
       }
-    }
-  },
-  handleChange(value, id) {
+    },
+    handleChange(value, id) {
     this.$axios.get("http://47.103.65.186:5200/api/cart", {
       params: {
         shuju: "update",
@@ -218,6 +217,8 @@ export default {
       }
     });
   }
+  }
+  
 };
 </script>
 
