@@ -304,7 +304,7 @@ export default {
   methods: {
     async getData() {
       let { id: id } = this.$route.query;
-      let goodslist = await this.$axios.get("http://localhost:5200/api/goods", {
+      let goodslist = await this.$axios.get("http://47.103.65.186:5200/api/goods", {
         params: {
           id: id
         }
@@ -340,7 +340,7 @@ export default {
       let { id: id } = this.$route.query;
       let num=this.num1;
       this.$axios
-        .post("http://localhost:5200/api/cart", {
+        .post("http://47.103.65.186:5200/api/cart", {
           params: {
             id,
             num

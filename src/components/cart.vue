@@ -172,7 +172,7 @@ export default {
       this.$router.push("/login");
     }
     this.$axios
-      .get("http://localhost:5200/api/cart", {
+      .get("http://47.103.65.186:5200/api/cart", {
         params: {
           shuju: "xl"
         }
@@ -214,7 +214,7 @@ export default {
       return num;
     },
     handleChange(value, id) {
-      this.$axios.get("http://localhost:5200/api/cart", {
+      this.$axios.get("http://47.103.65.186:5200/api/cart", {
         params: {
           shuju: "update",
           value,

@@ -163,7 +163,7 @@ export default {
   },
   created() {
     this.$axios
-      .get("http://localhost:5200/api/cart", {
+      .get("http://47.103.65.186:5200/api/cart", {
         params: {
           shuju: "xl"
         }
@@ -193,7 +193,7 @@ export default {
       for (var i = this.selected.length - 1; i >= 0; i--) {
         let id = this.goodlist[this.selected[i]].id;
         this.$axios
-          .delete("http://localhost:5200/api/cart", {
+          .delete("http://47.103.65.186:5200/api/cart", {
             params: {
               id
             }
@@ -210,7 +210,7 @@ export default {
     }
   },
   handleChange(value, id) {
-    this.$axios.get("http://localhost:5200/api/cart", {
+    this.$axios.get("http://47.103.65.186:5200/api/cart", {
       params: {
         shuju: "update",
         value,

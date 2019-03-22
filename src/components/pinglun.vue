@@ -169,7 +169,7 @@ export default {
   },
   created() {
     this.$axios
-      .get("http://localhost:5200/api/pinlun", {
+      .get("http://47.103.65.186:5200/api/pinlun", {
         params: {
           shuju: "xl"
         }

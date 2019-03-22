@@ -43,7 +43,7 @@ export default {
       if (this.user.trim().length > 0 && this.password.trim().length > 0) {
         this.$axios
           .post(
-            "http://localhost:5200/api/register",{
+            "http://47.103.65.186:5200/api/register",{
                 user,
                 psw
             })

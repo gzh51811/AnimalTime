@@ -67,7 +67,7 @@ export default {
         console.log(1)
         this.$axios
           .post(
-            "http://localhost:5200/api/logins",{
+            "http://47.103.65.186:5200/api/logins",{
                 user,
                 psw
             })
